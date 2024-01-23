@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="shortcut icon" href="/img/icon.png" type="image/x-icon" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/src/styles/style.css" />
+    <title>table</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="left-part">
+        <table class="table">
+          <thead head class="head">
+            <tr class="head__row">
+              <th class="head__el" width="20%">
+                <div class="head-content">
+                  <span class="head-content__text">Фамилия</span>
+                  <button
+                    class="head-content__btn"
+                    data-column-name="lastName"
+                  ></button>
+                </div>
+              </th>
+              <th class="head__el" width="20%">
+                <div class="head-content">
+                  <span class="head-content__text">Имя</span>
+                  <button
+                    class="head-content__btn"
+                    data-column-name="firstName"
+                  ></button>
+                </div>
+              </th>
+              <th class="head__el">
+                <div class="head-content">
+                  <span class="head-content__text">Описание</span>
+                  <button
+                    class="head-content__btn"
+                    data-column-name="description"
+                  ></button>
+                </div>
+              </th>
+              <th class="head__el" width="20%">
+                <div class="head-content">
+                  <span class="head-content__text">Цвет глаз</span>
+                  <button
+                    class="head-content__btn"
+                    data-column-name="eyeColor"
+                  ></button>
+                </div>
+              </th>
+            </tr>
+          </thead>
+
+          <tbody class="tbody"></tbody>
+        </table>
+
+        <div class="pages-menu">
+          <button class="pages-menu__left-arrow pages-menu__arrow"></button>
+          <p class="pages-menu__counter">1</p>
+          <button class="pages-menu__right-arrow pages-menu__arrow"></button>
+        </div>
+      </div>
+
+      <div class="right-part">
+        <div class="top-part">
+          <button class="top-part__button">Отменить сортировку</button>
+        </div>
+
+        <form class="form form_hide">
+          <h2 class="form__title">Редактирование данных</h2>
+
+          <div class="form__content">
+            <div class="form__string">
+              <p class="form__column-name">Фамилия:</p>
+              <input type="text" id="last-name-input" class="form__input" />
+            </div>
+            <div class="form__string">
+              <p class="form__column-name">Имя:</p>
+              <input type="text" id="first-name-input" class="form__input" />
+            </div>
+            <div class="form__string">
+              <p class="form__column-name">Описание:</p>
+              <textarea
+                id="description-input"
+                cols="30"
+                rows="6"
+                class="form__input_area"
+              ></textarea>
+            </div>
+            <div class="form__string">
+              <p class="form__column-name">Цвет глаз:</p>
+              <input type="text" id="eye-color-input" class="form__input" />
+            </div>
+          </div>
+
+          <button class="form__button" type="button">Сохранить</button>
+        </form>
+      </div>
+    </div>
+
+    <script type="module" src="/src/scripts/script.ts"></script>
+  </body>
+</html>
